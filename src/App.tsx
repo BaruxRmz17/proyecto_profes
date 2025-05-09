@@ -12,7 +12,7 @@ import UserLogin from "./pages/Login";
 import VerifyCode from "./pages/CodigoVerificacion";
 import Register from "./pages/Registrate";
 import CreateSchoolDashboard from "./pages/CrearEscuela";
-import UserDashboard from "./pages/DashboardEscuelas";
+import UserDashboard from "./pages/DashboardU";
 
 // Admin
 import AdminLogin from "./pages/admin/AdminLogin";
@@ -33,7 +33,7 @@ const Layout: React.FC = () => {
   const location = useLocation();
 
   // Rutas donde no se muestra ninguna navbar ni footer
-  const hideNavbarFooter = ["/", "/verificar-codigo", "/admin/login"].includes(location.pathname);
+  const hideNavbarFooter = ["/", "/verificar-codigo", "/admin/login", "/crearE"].includes(location.pathname);
 
   // Detecta si estás en una ruta de admin (excepto el login de admin)
   const isAdminRoute = location.pathname.startsWith("/admin") && location.pathname !== "/admin/login";

@@ -35,6 +35,15 @@ const Escuelas: React.FC = () => {
   const [chartData, setChartData] = useState<any>(null);
   const navigate = useNavigate();
 
+  // Lista de los 32 estados de México
+  const estadosMexico = [
+    'Aguascalientes', 'Baja California', 'Baja California Sur', 'Campeche', 'Chiapas', 'Chihuahua', 
+    'Ciudad de México', 'Coahuila', 'Colima', 'Durango', 'Estado de México', 'Guanajuato', 'Guerrero', 
+    'Hidalgo', 'Jalisco', 'Michoacán', 'Morelos', 'Nayarit', 'Nuevo León', 'Oaxaca', 'Puebla', 
+    'Querétaro', 'Quintana Roo', 'San Luis Potosí', 'Sinaloa', 'Sonora', 'Tabasco', 'Tamaulipas', 
+    'Tlaxcala', 'Veracruz', 'Yucatán', 'Zacatecas'
+  ];
+
   // Verificar autenticación y rol
   useEffect(() => {
     const checkUser = async () => {
@@ -245,16 +254,21 @@ const Escuelas: React.FC = () => {
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Estado
             </label>
-            <input
-              type="text"
-              placeholder="Estado"
+            <select
               value={newEscuela.estado}
               onChange={(e) =>
                 setNewEscuela({ ...newEscuela, estado: e.target.value })
               }
               className="border border-gray-300 px-4 py-2 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
-            />
+            >
+              <option value="" disabled>Selecciona un estado</option>
+              {estadosMexico.map((estado) => (
+                <option key={estado} value={estado}>
+                  {estado}
+                </option>
+              ))}
+            </select>
           </div>
           <div className="flex items-end">
             <button
