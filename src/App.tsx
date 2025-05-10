@@ -13,6 +13,18 @@ import VerifyCode from "./pages/CodigoVerificacion";
 import Register from "./pages/Registrate";
 import CreateSchoolDashboard from "./pages/CrearEscuela";
 import UserDashboard from "./pages/DashboardU";
+import CreateAlumnos from "./pages/Alumnos";
+import ExamGenerator from "./pages/GExamenes";
+import LessonPlanGenerator from "./pages/GPlaneaciones";
+import GradeRegistration from "./pages/Calificaciones";
+import ReportesDesempeno from "./pages/ReportesD";
+import EstadisticasGrupales from "./pages/RGrupales";
+import Boletas from "./pages/Boletas";
+import ControlAsistencia from "./pages/CAsistencia";
+import Participacion from "./pages/Participacion";
+import Comportamiento from "./pages/Comportamiento";
+import EditarPerfil from "./pages/EPerfil";
+
 
 // Admin
 import AdminLogin from "./pages/admin/AdminLogin";
@@ -50,6 +62,30 @@ const Layout: React.FC = () => {
           <Route path="/registrate" element={<Register />} />
           <Route path="/crearE" element={<CreateSchoolDashboard />} />
           <Route path="/homeU" element={<UserDashboard />} />
+          <Route path="/alumno" element={<CreateAlumnos />} />
+          <Route path="/GExamenes" element={<ExamGenerator />} />
+          <Route path="/GPlaneaciones" element={<LessonPlanGenerator />} />
+          <Route path="/Calificaciones" element={<GradeRegistration />} />
+          <Route path="/ReportesD" element={<ReportesDesempeno />} />
+          <Route path="/RGrupales" element={<EstadisticasGrupales />} />
+          <Route path="/Boletas" element={<Boletas />} />
+          <Route path="/CAsistencia" element={<ControlAsistencia />} />
+          <Route path="/Participacion" element={<Participacion />} />
+          <Route path="/Comportamiento" element={<Comportamiento />} />
+          <Route path="/EPerfil" element={<EditarPerfil />} />
+
+
+
+
+          
+
+          
+
+
+
+
+
+
 
 
 
@@ -59,6 +95,7 @@ const Layout: React.FC = () => {
           <Route path="/admin/escuelas" element={<Escuelas />} />
           <Route path="/admin/codigos" element={<Codigos />} />
           <Route path="/admin/usuarios" element={<Usuarios />} />
+
 
 
 

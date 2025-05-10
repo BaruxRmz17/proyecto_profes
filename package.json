@@ -13,6 +13,7 @@
     "@google/generative-ai": "^0.24.1",
     "@heroicons/react": "^1.0.6",
     "@react-pdf/renderer": "^3.4.4",
+    "@supabase/auth-helpers-react": "^0.5.0",
     "@supabase/supabase-js": "^2.45.1",
     "base64-js": "^1.5.1",
     "chart.js": "^4.4.7",
